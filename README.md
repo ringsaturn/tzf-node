@@ -1,8 +1,6 @@
 # `tzf-node`: A Node.js binding for tzf-rs
 
-<!-- ![https://github.com/napi-rs/package-template/actions](https://github.com/napi-rs/package-template/workflows/CI/badge.svg) -->
-
-> Template project for writing node packages with napi-rs.
+[![CI](https://github.com/ringsaturn/tzf-node/actions/workflows/CI.yml/badge.svg)](https://github.com/ringsaturn/tzf-node/actions/workflows/CI.yml)
 
 # Usage
 
