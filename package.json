@@ -1,5 +1,5 @@
 {
-  "name": "tzf-node",
+  "name": "tzf",
   "version": "0.1.0",
   "description": "A Node.js binding for tzf-rs",
   "main": "index.js",
@@ -18,7 +18,7 @@
     "index.js"
   ],
   "napi": {
-    "name": "tzf-node",
+    "name": "tzf",
     "triples": {
       "defaults": true,
       "additional": [

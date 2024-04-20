@@ -1,5 +1,5 @@
 {
-  "name": "tzf-node-linux-arm64-gnu",
+  "name": "tzf-linux-arm64-gnu",
   "version": "0.1.0",
   "os": [
     "linux"
@@ -7,9 +7,9 @@
   "cpu": [
     "arm64"
   ],
-  "main": "tzf-node.linux-arm64-gnu.node",
+  "main": "tzf.linux-arm64-gnu.node",
   "files": [
-    "tzf-node.linux-arm64-gnu.node"
+    "tzf.linux-arm64-gnu.node"
   ],
   "description": "A Node.js binding for tzf-rs",
   "keywords": [

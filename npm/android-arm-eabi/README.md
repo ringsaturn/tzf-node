@@ -1,3 +1,3 @@
-# `tzf-node-android-arm-eabi`
+# `tzf-android-arm-eabi`
 
-This is the **armv7-linux-androideabi** binary for `tzf-node`
+This is the **armv7-linux-androideabi** binary for `tzf`

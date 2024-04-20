@@ -1,3 +1,3 @@
-# `tzf-node-linux-arm-gnueabihf`
+# `tzf-linux-arm-gnueabihf`
 
-This is the **armv7-unknown-linux-gnueabihf** binary for `tzf-node`
+This is the **armv7-unknown-linux-gnueabihf** binary for `tzf`

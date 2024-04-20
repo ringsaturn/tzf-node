@@ -1,5 +1,5 @@
 {
-  "name": "tzf-node-android-arm-eabi",
+  "name": "tzf-android-arm-eabi",
   "version": "0.1.0",
   "os": [
     "android"
@@ -7,9 +7,9 @@
   "cpu": [
     "arm"
   ],
-  "main": "tzf-node.android-arm-eabi.node",
+  "main": "tzf.android-arm-eabi.node",
   "files": [
-    "tzf-node.android-arm-eabi.node"
+    "tzf.android-arm-eabi.node"
   ],
   "description": "A Node.js binding for tzf-rs",
   "keywords": [

@@ -1,3 +1,3 @@
-# `tzf-node-linux-arm64-musl`
+# `tzf-linux-arm64-musl`
 
-This is the **aarch64-unknown-linux-musl** binary for `tzf-node`
+This is the **aarch64-unknown-linux-musl** binary for `tzf`

@@ -1,3 +1,3 @@
-# `tzf-node-android-arm64`
+# `tzf-android-arm64`
 
-This is the **aarch64-linux-android** binary for `tzf-node`
+This is the **aarch64-linux-android** binary for `tzf`

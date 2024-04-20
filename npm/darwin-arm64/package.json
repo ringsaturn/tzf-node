@@ -1,5 +1,5 @@
 {
-  "name": "tzf-node-darwin-arm64",
+  "name": "tzf-darwin-arm64",
   "version": "0.1.0",
   "os": [
     "darwin"
@@ -7,9 +7,9 @@
   "cpu": [
     "arm64"
   ],
-  "main": "tzf-node.darwin-arm64.node",
+  "main": "tzf.darwin-arm64.node",
   "files": [
-    "tzf-node.darwin-arm64.node"
+    "tzf.darwin-arm64.node"
   ],
   "description": "A Node.js binding for tzf-rs",
   "keywords": [

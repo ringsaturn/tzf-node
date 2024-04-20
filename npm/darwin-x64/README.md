@@ -1,3 +1,3 @@
-# `tzf-node-darwin-x64`
+# `tzf-darwin-x64`
 
-This is the **x86_64-apple-darwin** binary for `tzf-node`
+This is the **x86_64-apple-darwin** binary for `tzf`

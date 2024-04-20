@@ -1,3 +1,3 @@
-# `tzf-node-freebsd-x64`
+# `tzf-freebsd-x64`
 
-This is the **x86_64-unknown-freebsd** binary for `tzf-node`
+This is the **x86_64-unknown-freebsd** binary for `tzf`

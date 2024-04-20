@@ -1,5 +1,5 @@
 {
-  "name": "tzf-node-linux-arm-gnueabihf",
+  "name": "tzf-linux-arm-gnueabihf",
   "version": "0.1.0",
   "os": [
     "linux"
@@ -7,9 +7,9 @@
   "cpu": [
     "arm"
   ],
-  "main": "tzf-node.linux-arm-gnueabihf.node",
+  "main": "tzf.linux-arm-gnueabihf.node",
   "files": [
-    "tzf-node.linux-arm-gnueabihf.node"
+    "tzf.linux-arm-gnueabihf.node"
   ],
   "description": "A Node.js binding for tzf-rs",
   "keywords": [

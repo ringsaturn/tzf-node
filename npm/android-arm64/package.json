@@ -1,5 +1,5 @@
 {
-  "name": "tzf-node-android-arm64",
+  "name": "tzf-android-arm64",
   "version": "0.1.0",
   "os": [
     "android"
@@ -7,9 +7,9 @@
   "cpu": [
     "arm64"
   ],
-  "main": "tzf-node.android-arm64.node",
+  "main": "tzf.android-arm64.node",
   "files": [
-    "tzf-node.android-arm64.node"
+    "tzf.android-arm64.node"
   ],
   "description": "A Node.js binding for tzf-rs",
   "keywords": [

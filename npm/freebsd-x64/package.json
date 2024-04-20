@@ -1,5 +1,5 @@
 {
-  "name": "tzf-node-freebsd-x64",
+  "name": "tzf-freebsd-x64",
   "version": "0.1.0",
   "os": [
     "freebsd"
@@ -7,9 +7,9 @@
   "cpu": [
     "x64"
   ],
-  "main": "tzf-node.freebsd-x64.node",
+  "main": "tzf.freebsd-x64.node",
   "files": [
-    "tzf-node.freebsd-x64.node"
+    "tzf.freebsd-x64.node"
   ],
   "description": "A Node.js binding for tzf-rs",
   "keywords": [

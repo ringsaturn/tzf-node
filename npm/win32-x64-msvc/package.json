@@ -1,5 +1,5 @@
 {
-  "name": "tzf-node-win32-x64-msvc",
+  "name": "tzf-win32-x64-msvc",
   "version": "0.1.0",
   "os": [
     "win32"
@@ -7,9 +7,9 @@
   "cpu": [
     "x64"
   ],
-  "main": "tzf-node.win32-x64-msvc.node",
+  "main": "tzf.win32-x64-msvc.node",
   "files": [
-    "tzf-node.win32-x64-msvc.node"
+    "tzf.win32-x64-msvc.node"
   ],
   "description": "A Node.js binding for tzf-rs",
   "keywords": [
