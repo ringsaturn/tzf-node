@@ -25,8 +25,6 @@ TODO
 | Android armv7    | ✓      | ✓      | ✓      |
 | FreeBSD x64      | ✓      | ✓      | ✓      |
 
-## Ability
-
 ## Development
 
 - Install the latest `Rust`
