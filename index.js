@@ -37,7 +37,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./package-template.android-arm64.node')
           } else {
-            nativeBinding = require('@napi-rs/package-template-android-arm64')
+            nativeBinding = require('@ringsaturn/tzf-node-android-arm64')
           }
         } catch (e) {
           loadError = e
@@ -49,7 +49,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./package-template.android-arm-eabi.node')
           } else {
-            nativeBinding = require('@napi-rs/package-template-android-arm-eabi')
+            nativeBinding = require('@ringsaturn/tzf-node-android-arm-eabi')
           }
         } catch (e) {
           loadError = e
@@ -67,7 +67,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./package-template.win32-x64-msvc.node')
           } else {
-            nativeBinding = require('@napi-rs/package-template-win32-x64-msvc')
+            nativeBinding = require('@ringsaturn/tzf-node-win32-x64-msvc')
           }
         } catch (e) {
           loadError = e
@@ -79,7 +79,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./package-template.win32-ia32-msvc.node')
           } else {
-            nativeBinding = require('@napi-rs/package-template-win32-ia32-msvc')
+            nativeBinding = require('@ringsaturn/tzf-node-win32-ia32-msvc')
           }
         } catch (e) {
           loadError = e
@@ -91,7 +91,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./package-template.win32-arm64-msvc.node')
           } else {
-            nativeBinding = require('@napi-rs/package-template-win32-arm64-msvc')
+            nativeBinding = require('@ringsaturn/tzf-node-win32-arm64-msvc')
           }
         } catch (e) {
           loadError = e
@@ -107,7 +107,7 @@ switch (platform) {
       if (localFileExisted) {
         nativeBinding = require('./package-template.darwin-universal.node')
       } else {
-        nativeBinding = require('@napi-rs/package-template-darwin-universal')
+        nativeBinding = require('@ringsaturn/tzf-node-darwin-universal')
       }
       break
     } catch {}
@@ -118,7 +118,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./package-template.darwin-x64.node')
           } else {
-            nativeBinding = require('@napi-rs/package-template-darwin-x64')
+            nativeBinding = require('@ringsaturn/tzf-node-darwin-x64')
           }
         } catch (e) {
           loadError = e
@@ -130,7 +130,7 @@ switch (platform) {
           if (localFileExisted) {
             nativeBinding = require('./package-template.darwin-arm64.node')
           } else {
-            nativeBinding = require('@napi-rs/package-template-darwin-arm64')
+            nativeBinding = require('@ringsaturn/tzf-node-darwin-arm64')
           }
         } catch (e) {
           loadError = e
@@ -149,7 +149,7 @@ switch (platform) {
       if (localFileExisted) {
         nativeBinding = require('./package-template.freebsd-x64.node')
       } else {
-        nativeBinding = require('@napi-rs/package-template-freebsd-x64')
+        nativeBinding = require('@ringsaturn/tzf-node-freebsd-x64')
       }
     } catch (e) {
       loadError = e
@@ -164,7 +164,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./package-template.linux-x64-musl.node')
             } else {
-              nativeBinding = require('@napi-rs/package-template-linux-x64-musl')
+              nativeBinding = require('@ringsaturn/tzf-node-linux-x64-musl')
             }
           } catch (e) {
             loadError = e
@@ -175,7 +175,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./package-template.linux-x64-gnu.node')
             } else {
-              nativeBinding = require('@napi-rs/package-template-linux-x64-gnu')
+              nativeBinding = require('@ringsaturn/tzf-node-linux-x64-gnu')
             }
           } catch (e) {
             loadError = e
@@ -189,7 +189,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./package-template.linux-arm64-musl.node')
             } else {
-              nativeBinding = require('@napi-rs/package-template-linux-arm64-musl')
+              nativeBinding = require('@ringsaturn/tzf-node-linux-arm64-musl')
             }
           } catch (e) {
             loadError = e
@@ -200,7 +200,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./package-template.linux-arm64-gnu.node')
             } else {
-              nativeBinding = require('@napi-rs/package-template-linux-arm64-gnu')
+              nativeBinding = require('@ringsaturn/tzf-node-linux-arm64-gnu')
             }
           } catch (e) {
             loadError = e
@@ -208,12 +208,62 @@ switch (platform) {
         }
         break
       case 'arm':
-        localFileExisted = existsSync(join(__dirname, 'package-template.linux-arm-gnueabihf.node'))
+        if (isMusl()) {
+          localFileExisted = existsSync(join(__dirname, 'package-template.linux-arm-musleabihf.node'))
+          try {
+            if (localFileExisted) {
+              nativeBinding = require('./package-template.linux-arm-musleabihf.node')
+            } else {
+              nativeBinding = require('@ringsaturn/tzf-node-linux-arm-musleabihf')
+            }
+          } catch (e) {
+            loadError = e
+          }
+        } else {
+          localFileExisted = existsSync(join(__dirname, 'package-template.linux-arm-gnueabihf.node'))
+          try {
+            if (localFileExisted) {
+              nativeBinding = require('./package-template.linux-arm-gnueabihf.node')
+            } else {
+              nativeBinding = require('@ringsaturn/tzf-node-linux-arm-gnueabihf')
+            }
+          } catch (e) {
+            loadError = e
+          }
+        }
+        break
+      case 'riscv64':
+        if (isMusl()) {
+          localFileExisted = existsSync(join(__dirname, 'package-template.linux-riscv64-musl.node'))
+          try {
+            if (localFileExisted) {
+              nativeBinding = require('./package-template.linux-riscv64-musl.node')
+            } else {
+              nativeBinding = require('@ringsaturn/tzf-node-linux-riscv64-musl')
+            }
+          } catch (e) {
+            loadError = e
+          }
+        } else {
+          localFileExisted = existsSync(join(__dirname, 'package-template.linux-riscv64-gnu.node'))
+          try {
+            if (localFileExisted) {
+              nativeBinding = require('./package-template.linux-riscv64-gnu.node')
+            } else {
+              nativeBinding = require('@ringsaturn/tzf-node-linux-riscv64-gnu')
+            }
+          } catch (e) {
+            loadError = e
+          }
+        }
+        break
+      case 's390x':
+        localFileExisted = existsSync(join(__dirname, 'package-template.linux-s390x-gnu.node'))
         try {
           if (localFileExisted) {
-            nativeBinding = require('./package-template.linux-arm-gnueabihf.node')
+            nativeBinding = require('./package-template.linux-s390x-gnu.node')
           } else {
-            nativeBinding = require('@napi-rs/package-template-linux-arm-gnueabihf')
+            nativeBinding = require('@ringsaturn/tzf-node-linux-s390x-gnu')
           }
         } catch (e) {
           loadError = e
@@ -234,6 +284,7 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { plus100 } = nativeBinding
+const { plus100, getTz } = nativeBinding
 
 module.exports.plus100 = plus100
+module.exports.getTz = getTz
