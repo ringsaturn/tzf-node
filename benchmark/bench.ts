@@ -1,28 +1,20 @@
-import b from 'benny'
+import b from "benny";
 
-import { plus100 } from '../index'
-
-function add(a: number) {
-  return a + 100
-}
+import { getTz } from "../index";
+import cities from "cities.json";
 
 async function run() {
   await b.suite(
-    'Add 100',
-
-    b.add('Native a + 100', () => {
-      plus100(10)
+    "Random Cities",
+    b.add("Random getTz", () => {
+      const city = cities[Math.floor(Math.random() * cities.length)];
+      getTz(parseFloat(city.lng), parseFloat(city.lat));
     }),
-
-    b.add('JavaScript a + 100', () => {
-      add(10)
-    }),
-
     b.cycle(),
     b.complete(),
-  )
+  );
 }
 
 run().catch((e) => {
-  console.error(e)
-})
+  console.error(e);
+});
