@@ -66,6 +66,7 @@
     "ava": "^6.0.0",
     "benny": "^3.7.1",
     "chalk": "^5.3.0",
+    "cities.json": "^1.1.35",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.29.0",
@@ -107,8 +108,5 @@
     "singleQuote": true,
     "arrowParens": "always"
   },
-  "packageManager": "yarn@4.1.1",
-  "dependencies": {
-    "cities.json": "^1.1.35"
-  }
+  "packageManager": "yarn@4.1.1"
 }
