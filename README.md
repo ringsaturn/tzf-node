@@ -1,12 +1,19 @@
-# `tzf-node`: A Node.js binding of tzf-rs
+# `tzf-node`: A Node.js binding of tzf-rs [![CI](https://github.com/ringsaturn/tzf-node/actions/workflows/CI.yml/badge.svg)](https://github.com/ringsaturn/tzf-node/actions/workflows/CI.yml)
 
-[![CI](https://github.com/ringsaturn/tzf-node/actions/workflows/CI.yml/badge.svg)](https://github.com/ringsaturn/tzf-node/actions/workflows/CI.yml)
+> [!NOTE]
+>
+> 1. This package uses a simplified polygon data and not so accurate around
+   > borders.
+> 2. The timezone data size has been optimized, about 5MB to download and use
+   > about 40MB memory.
 
 ## Install
 
 TODO
 
 ```bash
+# Wait for NPM response to my ticket as 'Package name triggered spam detection'
+npm install
 ```
 
 |                  | node14 | node16 | node18 |
@@ -24,6 +31,25 @@ TODO
 | Android arm64    | ✓      | ✓      | ✓      |
 | Android armv7    | ✓      | ✓      | ✓      |
 | FreeBSD x64      | ✓      | ✓      | ✓      |
+
+### Performance
+
+tzf-node is powered by [tzf-rs](https://github.com/ringsaturn/tzf-rs), a Rust
+library designed for server side high performance use cases. Which means it's
+not optimized for browser use cases. But you can trust it's performance.
+
+```console
+> tzf@0.2.3 bench
+> node -r @swc-node/register benchmark/bench.ts
+
+Running "Random Cities" suite...
+Progress: 100%
+
+  Random getTz:
+    604 255 ops/s, ±1.77%   | fastest
+
+Finished 1 case!
+```
 
 ## Development
 
@@ -45,25 +71,6 @@ And you will see:
   ─
 
   2 tests passed
-```
-
-### Benchmark
-
-tzf-node is powered by tzf-rs, a Rust library designed for server side high
-performance use cases. Which means it's not optimized for browser use cases. But
-the data size has been optimized, like 5MB~ and use about 40MB memory.
-
-```console
-> tzf@0.2.3 bench
-> node -r @swc-node/register benchmark/bench.ts
-
-Running "Random Cities" suite...
-Progress: 100%
-
-  Random getTz:
-    604 255 ops/s, ±1.77%   | fastest
-
-Finished 1 case!
 ```
 
 ### Release package
