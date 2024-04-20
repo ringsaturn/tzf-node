@@ -3,9 +3,9 @@
 > [!NOTE]
 >
 > 1. This package uses a simplified polygon data and not so accurate around
-   > borders.
+>    borders.
 > 2. The timezone data size has been optimized, about 5MB to download and use
-   > about 40MB memory.
+>    about 40MB memory.
 
 ## Install
 
