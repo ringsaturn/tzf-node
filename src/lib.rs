@@ -8,10 +8,10 @@ lazy_static! {
   static ref FINDER: DefaultFinder = DefaultFinder::default();
 }
 
-#[napi]
-pub fn plus_100(input: u32) -> u32 {
-  input + 100
-}
+// #[napi]
+// pub fn plus_100(input: u32) -> u32 {
+//   input + 100
+// }
 
 #[napi]
 pub fn get_tz(lng: f64, lat: f64) -> String {

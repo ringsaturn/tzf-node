@@ -1,12 +1,7 @@
 import test from 'ava'
 import cities from 'cities.json'
 
-import { getTz, plus100 } from '../index'
-
-test('sync function from native code', (t) => {
-  const fixture = 42
-  t.is(plus100(fixture), fixture + 100)
-})
+import { getTz } from '../index'
 
 test('sync getTz', (t) => {
   const result = getTz(116.407394, 39.904211)

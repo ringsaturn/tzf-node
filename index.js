@@ -284,7 +284,6 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { plus100, getTz } = nativeBinding
+const { getTz } = nativeBinding
 
-module.exports.plus100 = plus100
 module.exports.getTz = getTz
