@@ -3,9 +3,11 @@
   "version": "0.2.3",
   "description": "A Node.js binding for tzf-rs",
   "main": "index.js",
-  "repository": "https://github.com/ringsaturn/tzf-node",
+  "repository": "git+https://github.com/ringsaturn/tzf-node.git",
   "license": "MIT",
   "keywords": [
+    "timezone",
+    "geo",
     "napi-rs",
     "NAPI",
     "N-API",
