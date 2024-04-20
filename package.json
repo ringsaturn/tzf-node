@@ -110,5 +110,20 @@
     "singleQuote": true,
     "arrowParens": "always"
   },
-  "packageManager": "yarn@4.1.1"
+  "packageManager": "yarn@4.1.1",
+  "optionalDependencies": {
+    "tzf-win32-x64-msvc": "0.2.3",
+    "tzf-darwin-x64": "0.2.3",
+    "tzf-linux-x64-gnu": "0.2.3",
+    "tzf-linux-x64-musl": "0.2.3",
+    "tzf-linux-arm64-gnu": "0.2.3",
+    "tzf-win32-ia32-msvc": "0.2.3",
+    "tzf-linux-arm-gnueabihf": "0.2.3",
+    "tzf-darwin-arm64": "0.2.3",
+    "tzf-android-arm64": "0.2.3",
+    "tzf-freebsd-x64": "0.2.3",
+    "tzf-linux-arm64-musl": "0.2.3",
+    "tzf-win32-arm64-msvc": "0.2.3",
+    "tzf-android-arm-eabi": "0.2.3"
+  }
 }

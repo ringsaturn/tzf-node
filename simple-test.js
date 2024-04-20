@@ -1,4 +1,4 @@
-const { plus100, getTz } = require('./index')
+const { plus100, getTz } = require('./tzf')
 
 // console.assert(plus100(0) === 100, 'Simple test failed')
 
