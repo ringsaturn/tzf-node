@@ -40,7 +40,6 @@ jobs:
             build: |
               yarn build --target i686-pc-windows-msvc
               yarn test
-              yarn bench
             target: i686-pc-windows-msvc
           - host: ubuntu-latest
             target: x86_64-unknown-linux-gnu
@@ -244,8 +243,6 @@ jobs:
         shell: bash
       - name: Test bindings
         run: yarn test
-      - name: Bench bindings
-        run: yarn bench
   test-linux-x64-gnu-binding:
     name: Test bindings on Linux-x64-gnu - node@${{ matrix.node }}
     needs:
@@ -276,8 +273,6 @@ jobs:
         shell: bash
       - name: Test bindings
         run: docker run --rm -v $(pwd):/build -w /build node:${{ matrix.node }}-slim yarn test
-      - name: Bench bindings
-        run: docker run --rm -v $(pwd):/build -w /build node:${{ matrix.node }}-slim yarn bench
   test-linux-x64-musl-binding:
     name: Test bindings on x86_64-unknown-linux-musl - node@${{ matrix.node }}
     needs:
@@ -310,8 +305,6 @@ jobs:
         shell: bash
       - name: Test bindings
         run: docker run --rm -v $(pwd):/build -w /build node:${{ matrix.node }}-alpine yarn test
-      - name: Bench bindings
-        run: docker run --rm -v $(pwd):/build -w /build node:${{ matrix.node }}-alpine bench test
   test-linux-aarch64-gnu-binding:
     name: Test bindings on aarch64-unknown-linux-gnu - node@${{ matrix.node }}
     needs:
@@ -351,7 +344,6 @@ jobs:
           run: |
             set -e
             yarn test
-            yarn bench
             ls -la
   test-linux-aarch64-musl-binding:
     name: Test bindings on aarch64-unknown-linux-musl - node@lts
@@ -386,7 +378,6 @@ jobs:
           run: |
             set -e
             yarn test
-            yarn bench
   test-linux-arm-gnueabihf-binding:
     name: Test bindings on armv7-unknown-linux-gnueabihf - node@${{ matrix.node }}
     needs:
@@ -425,7 +416,6 @@ jobs:
           run: |
             set -e
             yarn test
-            yarn bench
             ls -la
   publish:
     name: Publish
