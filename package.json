@@ -1,6 +1,6 @@
 {
   "name": "tzf",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "A Node.js binding of tzf-rs",
   "main": "index.js",
   "repository": "git+https://github.com/ringsaturn/tzf-node.git",
