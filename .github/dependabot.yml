@@ -17,6 +17,9 @@ updates:
         # dependency name)
         patterns:
           - '*' # A wildcard that matches all dependencies in the package
+    ignore:
+      - dependency-name: eslint
+
   - package-ecosystem: 'github-actions' # See documentation for possible values
     directory: '/' # Location of package manifests
     schedule:
